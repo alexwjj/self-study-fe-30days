@@ -1,0 +1,416 @@
+/*======reset css======*/
+body{
+    font-size: 14px;
+    font-family: "Microsoft YaHei",sans-serif;
+    color: #333;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    text-decoration: none;
+    color: #333;
+}
+
+/*导航条*/
+
+.alex_nav {
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    /*固定导航样式*/
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+}
+.navbar-header .img-logo img{
+    display: block;
+    width: 100px;
+    height: 80px;    
+}
+.alex_nav .navbar-brand {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.alex_nav .navbar-brand:hover,
+.alex_nav .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.alex_nav .navbar-text {
+    color: #777;
+}
+.alex_nav .navbar-nav > li > a {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+
+.alex_nav .navbar-nav > li > a:hover,
+.alex_nav .navbar-nav > li > a:focus {
+    color: #777;
+    background-color: transparent;
+    border-bottom: 3px solid #e92322;
+}
+.alex_nav .navbar-nav > .active > a,
+.alex_nav .navbar-nav > .active > a:hover,
+.alex_nav .navbar-nav > .active > a:focus {
+    color: #555;
+    border-bottom: 3px solid #e92322;
+}
+.alex_nav .navbar-nav > .active > a:visited{
+    border-bottom: 0;
+}
+.alex_nav .navbar-nav > .disabled > a,
+.alex_nav .navbar-nav > .disabled > a:hover,
+.alex_nav .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.alex_nav .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+}
+.alex_nav .navbar-toggle:hover,
+.alex_nav .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.alex_nav .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.alex_nav .navbar-collapse,
+.alex_nav .navbar-form {
+    border-color: #e7e7e7;
+}
+.alex_nav .navbar-nav > .open > a,
+.alex_nav .navbar-nav > .open > a:hover,
+.alex_nav .navbar-nav > .open > a:focus {
+    color: #777;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .alex_nav .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .alex_nav .navbar-nav .open .dropdown-menu > li > a:hover,
+    .alex_nav .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .alex_nav .navbar-nav .open .dropdown-menu > .active > a,
+    .alex_nav .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .alex_nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .alex_nav .navbar-nav .open .dropdown-menu > .disabled > a,
+    .alex_nav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .alex_nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.alex_nav .navbar-link {
+    color: #777;
+}
+.alex_nav .navbar-link:hover {
+    color: #333;
+}
+.alex_nav .btn-link {
+    color: #777;
+}
+.alex_nav .btn-link:hover,
+.alex_nav .btn-link:focus {
+    color: #333;
+}
+.alex_nav .btn-link[disabled]:hover,
+fieldset[disabled] .alex_nav .btn-link:hover,
+.alex_nav .btn-link[disabled]:focus,
+fieldset[disabled] .alex_nav .btn-link:focus {
+    color: #ccc;
+}
+
+/*轮播图*/
+.alex_banner .pc_imgBox{
+    display: block;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.alex_banner .m_imgBox{
+    display: block;
+    width: 100%;
+}
+.alex_banner .m_imgBox img{
+    display: block;
+    width: 100%;
+}
+/* 个人简介 */
+.myself {
+    width: 100%;   
+}
+.myself .alex_logo{
+    width: 100%;   
+}
+.myself .alex_logo img{
+    display: block;
+    width: 30%;
+    height: 50%;
+    margin: 0 auto;
+}
+.myself .alex_logo p:first-of-type{
+    font-size: 30px;
+    color: #777;
+    text-align: center;
+}
+.myself .alex_logo p:last-of-type{
+    text-align: center
+}
+.myself .alex_logo p:nth-last-of-type(2){
+    text-align: center
+}
+.myself .detail_myself p,
+.myself .about_myself p{
+    font-size: 16px;
+    color: #777;
+}
+.myself .about_myself p:first-child,
+.myself .detail_myself p:first-child
+{
+    font-size: 30px;
+    margin-top: 10px;
+    
+}
+.myself .detail_myself a{
+    color: #e92322;
+}
+/* 专业技能 */
+.item-title {
+    color: #777;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px auto;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #e92322 ;
+}
+.alex_skill .btn{
+    color: white;
+    background-color: #e92322
+}
+.alex_skill .container .caption p{
+   word-break: break-all;
+ 
+}
+.alex_skill .container .caption p:first-of-type{
+    text-indent: 1em;
+}
+/* 项目经验 */
+.alex_experience{
+    padding: 20px 0;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+.alex_experience .nav-tabs-parent{
+    width: 100%;
+    overflow: hidden;
+}
+.alex_experience .nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.alex_experience .nav-tabs > li {
+    float: left;
+    margin-bottom: 0;
+    margin-left:10px;
+}
+.alex_experience .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+    border-radius: 4px 4px 0 0;
+}
+.alex_experience .nav-tabs > li > a:hover {
+    background: #f5f5f5;
+}
+.alex_experience .nav-tabs > li.active > a,
+.alex_experience .nav-tabs > li.active > a:hover,
+.alex_experience .nav-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 3px solid #e92322;
+}
+.alex_experience .nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.alex_experience .nav-tabs.nav-justified > li {
+    float: none;
+}
+.alex_experience .nav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.alex_experience .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .alex_experience .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .alex_experience .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.alex_experience .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.alex_experience .nav-tabs.nav-justified > .active > a,
+.alex_experience .nav-tabs.nav-justified > .active > a:hover,
+.alex_experience .nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .alex_experience .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .alex_experience .nav-tabs.nav-justified > .active > a,
+    .alex_experience .nav-tabs.nav-justified > .active > a:hover,
+    .alex_experience .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+.experience_box{
+    display: block;
+    width: 100%;
+    height: 170px;
+    background: #fff;
+    box-shadow: 3px 3px 5px #d8d8d8;
+    margin-top: 30px;
+    color: #666;
+}
+.experience_box:hover{
+    color: #666;
+}
+.experience_box.active{
+    background: #e92322;
+    color: #fff;
+    position: relative;
+}
+
+.experience_box .pro_left{
+    overflow: hidden;
+}
+.experience_box .pro_left h3{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.experience_box .pro_left div{
+    font-size: 12px;
+}
+
+/*浮动元素优先 两栏自适应注意*/
+.experience_box .pro_right{
+    float: right;
+    width: 80px;
+    height: 170px;
+    text-align: center;
+    border-left: 1px dashed #ccc;
+    position: relative;
+}
+.experience_box .pro_right::before,
+.experience_box .pro_right::after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #f5f5f5;
+    left: -6px;
+}
+.experience_box .pro_right::before{
+    top: -6px;
+    box-shadow: 0 -2px 2px #d8d8d8 inset;
+}
+.experience_box .pro_right::after{
+    bottom: -6px;
+    box-shadow: 0 2px 2px #d8d8d8 inset;
+}
+.experience_box .pro_right .tips{
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+}
+.experience_box .pro_right .tips span{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    border-width: 1px;
+    border-style: solid;
+    display: inline-block;
+}
+.experience_box .pro_right .tips .red{
+    color: red;
+    border-color: red;
+}
+.experience_box .pro_right .tips .green{
+    color: green;
+    border-color: green;
+}
+
+.experience_box .pro_right p:first-of-type{
+    margin-top: 25px;
+    color: #e92322;
+}
+.experience_box.active .pro_right p:first-of-type{
+    color: #fff;
+}
+.experience_box .pro_right p:first-of-type b{
+    font-size: 48px;
+}
+.experience_box .pro_right p:first-of-type sub{
+    bottom: 0;
+    font-size: 12px;
+}
+
+
+/* 社区 */
+.alex_contact .container img {
+    display: block;
+    width: 50%;
+    background-size: cover;
+    margin: 0 auto; 
+}
+.alex_contact .container a{
+    display: block;
+    position: relative
+}
+.alex_contact .container h5{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top:-20px;
+    display: none
+}
+.alex_contact .container a:hover h5{
+    display: block
+}
+.alex_footer{
+    width: 100%;
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+    margin-top: 30px;
+}

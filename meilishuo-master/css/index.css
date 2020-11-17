@@ -1,0 +1,656 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors 俊劫
+ * @date   2018-8
+ */
+
+/***第一部分样式，重置默认***/
+html,body,h1,h2,h3,h4,ul,ol,li,p{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #666;
+}
+li{
+	list-style-type: none;
+}
+
+
+/***第二部分样式，设置当前页面公共样式***/
+body{
+	font-size: 12px;
+	font-family: Arial,'Microsoft YaHei';
+	color: #666;
+}
+/*清除浮动对父容器高度的影响*/
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*让页面上的内容居中显示，宽度固定为1200px*/
+.layout{
+	width: 1200px;
+	margin: 0 auto;
+}
+.red{
+	color: #f36;
+}
+
+
+/***第三部分样式，页面功能区块的样式***/
+
+/*头部条样式*/
+.top-bar{
+	height: 30px;
+	text-align: right;
+	background-color: #f8f8f8;
+}
+.top-bar ul.topbar-list>li{
+	display: inline-block;
+	line-height: 30px;
+}
+.top-bar li a{
+	display: inline-block;
+	padding: 0 18px;
+	height: 20px;
+	border-right: 1px dotted #ccc;
+	line-height: 20px;
+}
+.top-bar li:nth-child(6) a i{
+	color: #f36;
+}
+.top-bar li a:hover{
+	color: #f36;
+}
+.top-bar li a:hover i{
+	color: #666;
+}
+.top-bar li:nth-child(6) a:hover i{
+	color: #f36;
+}
+.top-bar li:last-child a{
+	border-right: none;
+}
+.top-bar li a i{
+	padding-right: 7px;
+	line-height: 20px;
+}
+/*我的收藏和帮助中心下拉选项*/
+.top-bar li:nth-child(5){
+	position: relative;
+}
+.top-bar li:nth-child(8){
+	position: relative;
+}
+.top-bar li ul.down{
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: -4px;
+	z-index: 8;
+	background-color: #f8f8f8;
+	border: 1px solid #eee;
+	padding: 8px 0;
+	line-height: 20px;
+	text-align: left;
+}
+.top-bar li:nth-child(5):hover ul.down{
+	display: block;
+}
+.top-bar li:nth-child(8):hover ul.down{
+	display: block;
+}
+.top-bar li ul.down li{
+	line-height: 20px;
+}
+.top-bar li ul.down li a{
+	margin-bottom: 3px;
+	border: 0;
+}
+
+/*头部广告图片条样式*/
+.gg-banner{
+	display: block;
+	width: 1200px;
+	height: 75px;	
+}
+.gg-banner img{
+	width: 1200px;
+}
+
+/*头部站内搜索样式*/
+/*logo样式*/
+.com-search a.logo{
+	float: left;
+	margin-top: 40px;
+}
+/*搜索块整体样式*/
+.com-search .layout{
+	position: relative;
+	height: 120px;
+}
+.com-search .search{
+	position: absolute;
+	top: 21px;
+	left: 50%;
+	margin-left: -254px;
+}
+/*搜索导航条*/
+.com-search .search-bar li{
+	float: left;
+	background-color: #f2f2f2;
+	width: 56px;
+	text-align: center;
+	line-height: 24px;
+	cursor: pointer;
+}
+.com-search .search-bar li.active{
+	background-color: #ff3366;
+	color: #fff;
+}
+/*搜索框样式*/
+.com-search .search-box input{
+	float: left;
+	border: 2px solid #ff3366;
+	width: 437px;
+	height: 28px;
+	line-height: 28px;
+	padding: 0;
+	margin: 0;
+	padding-left: 8px;
+	outline: none;
+}
+.com-search .search-box .search-btn{
+	float: left;
+	background-color: #ff3366;
+	color: #fff;
+	width: 70px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	cursor: pointer;
+}
+.com-search .search-btn i{
+	font-size: 18px;
+}
+.com-search .search-box{
+	display: none;
+}
+.com-search .search-box.active{
+	display: block;
+}
+/*热搜词*/
+.com-search .hot-search{
+	padding-top: 12px;
+}
+.com-search .hot-search li{
+	float: left;
+	padding-right: 10px;
+}
+.com-search .hot-search li .hot{
+	color: #ff3366;
+}
+/*二维码图片样式*/
+.com-search .two-bar-codes{
+	position: absolute;
+	right: 0;
+	top: 3px;
+}
+
+/*分类导航条样式*/
+.nav-box-bar{
+	height: 40px;
+	line-height: 42px;
+	font-size: 14px;
+	border-bottom: 1px solid #f36;
+	text-align: center;
+}
+.nav-box-bar li.nav-tab{
+	float: left;
+	margin: 0 40px;
+}
+.nav-box-bar li.all{
+	position: relative;
+	width: 285px;
+	margin: 0;
+	margin-right: 40px;
+	background-color: #f36;
+	color: #fff;
+}
+.nav-box-bar li.nav-tab .hot{
+	color: #f36;
+}
+.nav-box-bar li.nav-tab a:hover{
+	color: #f36;
+}
+/*全部商品列表的样式*/
+.nav-box-bar li.all ul.sec-attr{
+	position: absolute;
+	top: 41px;
+	left: 0;
+	width: 285px;
+	box-sizing: border-box;
+	border: 1px solid #f36;
+	border-top: 0;
+	background-color: #fff;
+}
+.nav-box-bar li.all ul.sec-attr li.list{  /*正常时候的样式*/
+	position: relative;
+	border-bottom: 1px dashed #ccc;
+	margin: 0 20px;
+}
+.nav-box-bar li.all ul.sec-attr li.list:last-child{
+	border-bottom: 0;
+}
+.nav-box-bar .list-content h3.list-title{
+	float: left;
+	width: 29px;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: normal;
+	margin-right: 20px;
+}
+.nav-box-bar .list-content p.list-para{
+	float: left;
+	width: 180px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #666;
+}
+.nav-box-bar .list-content p.list-para a{
+	float: left;
+	margin-right: 10px;
+}
+.nav-box-bar .list-content i{
+	float: left;
+	color: #aaa;
+	font-size: 14px;
+}
+/*每列中下拉列表选项的样式*/
+.nav-box-bar li.all ul.sec-attr li.active{  /*列被激活时候的样式，覆盖正常的样式*/
+	border-bottom: 1px solid #f36;
+	border-top: 1px solid #f36;
+	margin: 0;
+	padding-left: 20px;
+	margin-top: -1px;
+	width: 264px;
+}
+.nav-box-bar li.all ul.sec-attr li.active .list-content{
+	position: relative;
+	border-right: 1px solid #fff;
+	background-color: #fff;
+	margin-right: -1px;
+	z-index: 8;
+}
+
+.nav-box-bar li.list ul.nav-list{
+	display: none;
+	position: absolute;
+	top: -1px;
+	left: 283px;
+	width: 260px;
+	border: 1px solid #f36;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+	background-color: #fff;
+	z-index: 4;
+}
+.nav-box-bar li.list ul.nav-list h4{
+	height: 20px;
+	line-height: 20px;
+	padding-top: 12px;
+	padding-bottom: 6px;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: left;
+}
+.nav-box-bar li.list ul.nav-list p{
+	font-size: 12px;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+.nav-box-bar li.list ul.nav-list p a{
+	float: left;
+	margin-right: 14px;
+}
+
+/***轮播样式部分***/
+/*设置窗口*/
+.carousel{
+	position: relative;
+	width: 896px;
+	height: 447px;
+	overflow: hidden;
+	margin: 26px 0 0 304px;
+}
+/*设置面板*/
+.carousel .img-ct{
+	position: absolute;
+}
+.carousel .img-ct::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.carousel .img-ct li{
+	float: left;
+}
+/*翻页箭头*/
+.carousel .arrow{
+	position: absolute;
+	top: 50%;
+	margin-top: -32px;
+	width: 37px;
+	height: 64px;
+	line-height: 64px;
+	text-align: center;   /*脱离文档流变成块级框*/
+	color: #fff;
+	font-size: 60px;
+	font-weight: 700;
+}
+.carousel .arrow:hover{
+	border-radius: 5px;
+	background-color: rgba(50%,50%,50%,0.5);
+}
+.carousel .pre{
+	left: 10px;
+}
+.carousel .next{
+	right: 10px;
+}
+/*轮播切换标记*/
+.bullet{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.bullet li{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 5px;
+}
+.bullet li.active{
+	background-color: #f36;
+	width: 20px;
+}
+
+/***内容区块图片排列的样式***/
+/*广告推荐*/
+#content .gg-rec{
+	margin-right: -20px;
+	margin-top: 20px;
+}
+#content .gg-rec li{
+	float: left;
+	margin-right: 20px;
+}
+/*官网直邮*/
+#content h2{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+#content .direct-mail .brand-collect{
+	float: left;
+	margin-right: 20px;
+	width: 283px;
+	height: 589px;
+	overflow: hidden;
+}
+#content .direct-mail .brand-collect a{
+	display: block;
+}
+#content .direct-mail .brand-collect a.sad-up{
+	width: 283px;
+	height: 297px;
+}
+
+#content .direct-mail .brand-logo a.sad-list{
+	float: left;
+	border: 1px solid #eee;
+	width: 140px;
+	height: 96px;
+	overflow: hidden;
+	margin: 0 -1px -1px 0;
+}
+#content .direct-mail .brand-logo a.sad-list img{
+	width: 140px;
+}
+
+#content .direct-mail .show-one{
+	float: left;
+	width: 305px;
+	height: 589px;
+	overflow: hidden;
+}
+#content .direct-mail .show-one a{
+	display: block;
+}
+#content .direct-mail .show-one img{
+	width: 305px;
+}
+
+#content .direct-mail .show-other{
+    float: left;
+    width: 592px;
+    height: 589px;
+    overflow: hidden;
+}
+#content .direct-mail .show-other a{
+	float: left;
+	border: 1px solid #eee;
+	width: 294px;
+	height: 293px;
+	overflow: hidden;
+	margin: 0 -1px -1px 0;
+}
+/*为你精选*/
+#content .for-you .foryou-line1 a{
+	display: block;
+	float: left;
+}
+#content .for-you .foryou-line1 a.gg-big{
+	width: 590px;
+	height: 284px;
+	overflow: hidden;
+}
+#content .for-you .foryou-line1 a.gg-sm{
+	width: 184px;
+	height: 284px;
+	overflow: hidden;
+	margin-left: 19px;
+}
+#content .for-you .foryou-line2{
+	margin-top: 20px;
+}
+#content .for-you .foryou-line2>a{
+	display: block;
+	float: left;
+	width: 285px;
+	height: 220px;
+	overflow: hidden;
+	margin-left: 20px;
+}
+#content .for-you .foryou-line2 .attr{
+	float: left;
+	width: 245px;
+	height: 200px;
+	overflow: hidden;
+	background-color: #f9f9f9;
+	padding: 10px 20px;
+}
+#content .for-you .foryou-line2 .attr li{
+	float: left;
+	width: 81px;
+	height: 20px;
+	line-height: 20px;
+	margin: 10px 0;
+	color: #333;
+	font-size: 14px;
+	text-align: left;
+}
+#content .for-you .foryou-line2 .attr a:hover{
+	color: #f36;
+}
+
+/***页脚部分样式***/
+#footer{
+	background-color: #f5f5f5;
+	margin-top: 15px;
+	padding-top: 30px;
+	border-top: 1px solid #ddd;
+}
+#footer a:hover{
+	color: #f36;
+}
+#footer .something h4{
+	font-size: 16px;
+	line-height: 28px;
+}
+#footer .something .info{
+	float: left;
+}
+#footer .something .info>li{
+	float: left;
+	margin-right: 104px;
+	margin-bottom: 20px;
+	line-height: 26px;
+}
+#footer .something .info>li li{
+	margin-top: 12px;
+}
+#footer .something .info>li.focus span{
+	float: left;
+	height: 18px;
+	width: 18px;
+	margin-top: 5px;
+	margin-right: 5px;
+	background: url(../img/footersprite.png) no-repeat;
+}
+#footer .something .info>li.focus span.sina{
+	background-position: 0 0;
+}
+#footer .something .info>li.focus span.qzone{
+	background-position: -28px 0;
+}
+#footer .something .info>li.focus span.tencent{
+	background-position: -56px 0;
+}
+#footer .something .info>li.focus a{
+	vertical-align: middle;
+}
+
+#footer .something .follow{
+	float: right;
+}
+#footer .something .follow li{
+	float: left;
+	margin-right: 85px;
+	text-align: center;
+}
+#footer .something .follow li:first-child{
+	margin-right: 55px;
+}
+#footer .something .follow li img{
+	margin-top: 13px;
+}
+
+#footer .record{
+	border-top: 1px solid #e6e6e6;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	line-height: 22px;
+	text-align: center;
+}
+
+
+/***最右侧边栏样式***/
+#side-bar{
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 38px;
+	background-color: #f6f6f6;
+	border-left: 1px solid #ddd;
+}
+#side-bar ul{
+	position: absolute;
+	top: 25px;
+	border-top: 1px solid #ddd;
+}
+#side-bar li{
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+#side-bar li span{
+	display: inline-block;
+	margin-left: -19px;
+	height: 30px;
+	transform: rotate(90deg);
+}
+#side-bar li a{
+	display: block;
+	width: 16px;
+	padding: 16px 12px;
+}
+#side-bar li i{
+	color: #f36;
+}
+#side-bar li:hover{
+	background-color: #f36;
+	color: #fff;
+}
+#side-bar li:hover i,#side-bar li:hover a{
+	color: #fff;
+}
+#side-bar li.go-top{  /*默认隐藏*/
+	display: none;
+}
+/*侧边栏下载APP二维码*/
+#side-bar .qr-code{
+	display: none;
+	position: relative;
+	padding: 13px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+#side-bar .qr-code::before{
+	content: "";
+	position: absolute;
+	top: 45px;
+	right: -13px;
+	border-left: 13px solid #ddd;
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+}
+#side-bar .qr-code::after{
+	content: "";
+	position: absolute;
+	top: 45px;
+	right: -12px;
+	border-left: 13px solid #fff;
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+}
+#side-bar li.download{
+	position: relative;
+}
+#side-bar li.download:hover .qr-code{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 40px;
+}
+/* 俊劫qq：798595965 */
+
